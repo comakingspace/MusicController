@@ -8,14 +8,14 @@ echo 'Updating the apt-get index'
 sudo apt-get -qq update >> /dev/null
 echo '--------------------------------------------'
 echo 'Installing mopidy'
-sudo apt-get -qq -y install build-essential python-dev python-pip mopidy >> /dev/null
+sudo apt-get -qq -y --no-install-recommends install build-essential python-dev python-pip mopidy >> /dev/null
 
 echo '--------------------------------------------'
 echo 'now we will install a couple of mopidy extensions.'
 #extensions are installed in this order because the apt-get commands will install dependencies like libffi automatically. This is needed by some of the extensions installed via pip.
 
 echo 'spotify and youtube..'
-sudo apt-get -qq -y install mopidy-spotify mopidy-spotify-tunigo mopidy-youtube >> /dev/null
+sudo apt-get -qq -y --no-install-recommends install mopidy-spotify mopidy-spotify-tunigo mopidy-youtube >> /dev/null
 #echo 'Mopidy-Iris..'
 #sudo pip install -q Mopidy-Iris
 #echo 'Mopidy-Material-Webclient..'
