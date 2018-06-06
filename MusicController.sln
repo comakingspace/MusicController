@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{99F24717-4896-4387-A39E-7DEF3F9ADF94}"
+	ProjectSection(SolutionItems) = preProject
+		asound.conf = asound.conf
+		custom_connect.sh = custom_connect.sh
+		custom_disconnect.sh = custom_disconnect.sh
+		defaultConfigBluetooth.py = defaultConfigBluetooth.py
+		defaultConfigBTSpeaker.py = defaultConfigBTSpeaker.py
+		defaultConfigMopidy.py = defaultConfigMopidy.py
+		defaultConfigPulseAudioBT.py = defaultConfigPulseAudioBT.py
+		Install.sh = Install.sh
+		Install_BT_Speaker.sh = Install_BT_Speaker.sh
+		Install_Mopidy.sh = Install_Mopidy.sh
+		Install_Pulseaudio.sh = Install_Pulseaudio.sh
+		Install_SystemSettings.sh = Install_SystemSettings.sh
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8291DAC-5001-4971-94B4-D78320B47F84}
+	EndGlobalSection
+EndGlobal
