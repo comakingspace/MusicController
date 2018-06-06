@@ -90,9 +90,14 @@ BLACKLIST=/etc/modprobe.d/raspi-blacklist.conf
 CONFIG=/boot/config.txt
 #Let us do some basic config
 echo '--------------------------------------------'
-echo 'First, we need to do some basic settings: Expand the FS, boot to command line and adjust the ALSA config.'
-sudo raspi-config nonint do_expand_rootfs
+echo 'First, we need to do some basic settings...'
+echo 'Expand the FS'
+sudo raspi-config nonint do_expand_rootfs >> /dev/null
+echo 'boot to command line'
 sudo raspi-config nonint do_boot_behaviour B1
+echo 'Change the hostname'
+sudo raspi-config nonint do_change_hostname CoMakingController
+echo 'adjust the ALSA config.'
 sudo cp asound.conf /etc/asound.conf
 
 #Enable the x400 expansion board
