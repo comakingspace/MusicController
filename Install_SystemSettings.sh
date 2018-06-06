@@ -55,7 +55,7 @@ mv "$3.bak" "$3"
 enable_wifi_ap()
 {
 #This will be needed in a later version, when the pi should open a Wifi AP.
-sudo apt-get -qq -y install dnsmasq hostapd
+sudo apt-get -qq -y install dnsmasq hostapd >> /dev/null
 NOW=$(date +"%m_%d_%Y")
 sudo cp /etc/dhcpcd.conf /etc/dhcpcd_$NOW.conf.bak
 sudo echo "interface wlan0" > /etc/dhcpcd.conf
@@ -96,7 +96,7 @@ sudo raspi-config nonint do_expand_rootfs >> /dev/null
 echo 'boot to command line'
 sudo raspi-config nonint do_boot_behaviour B1
 echo 'Change the hostname'
-sudo raspi-config nonint do_change_hostname CoMakingController
+sudo raspi-config nonint do_hostname CoMakingController
 echo 'adjust the ALSA config.'
 sudo cp asound.conf /etc/asound.conf
 
