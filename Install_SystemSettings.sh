@@ -97,8 +97,10 @@ echo 'boot to command line'
 sudo raspi-config nonint do_boot_behaviour B1
 echo 'Change the hostname'
 sudo raspi-config nonint do_hostname CoMakingController
-echo 'adjust the ALSA config.'
-sudo cp asound.conf /etc/asound.conf
+
+#Right now, alsa does not need to be adjusted, since the built in sound card of the RPi supports hardware mixing.
+#echo 'adjust the ALSA config.'
+#sudo cp asound.conf /etc/asound.conf
 
 #Enable the x400 expansion board
 #echo '--------------------------------------------'
@@ -131,4 +133,4 @@ sudo systemctl restart ssh
 
 
 echo '--------------------------------------------'
-echo 'All done, a reboot is recommended.'
+echo 'System Settings changed, a reboot is recommended.'
