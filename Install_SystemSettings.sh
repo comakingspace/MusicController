@@ -55,7 +55,7 @@ mv "$3.bak" "$3"
 enable_wifi_ap()
 {
 #This will be needed in a later version, when the pi should open a Wifi AP.
-sudo apt-get -qq -y --no-install-recommends install dnsmasq hostapd >> /dev/null
+sudo apt-get -qq -y  install dnsmasq hostapd >> /dev/null
 NOW=$(date +"%m_%d_%Y")
 sudo cp /etc/dhcpcd.conf /etc/dhcpcd_$NOW.conf.bak
 sudo echo "interface wlan0" > /etc/dhcpcd.conf

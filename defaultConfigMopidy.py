@@ -16,12 +16,11 @@ def logging_defaults():
     config['logging']['debug_file'] = '/var/log/mopidy/mopidy-debug.log'
 
 def local_defaults():
-    config['local']['media_dir'] = '/var/lib/mopidy/media'
-    config['local']['enabled'] = 'False'
+    config['local']['media_dir'] = '/Music'
+    config['local']['enabled'] = 'True'
 
 def m3u_defaults():
     config['m3u']['playlists_dir'] = '/var/lib/mopidy/playlists'
-    config['m3u']['test'] = 'bullshit'
 
 def http_defaults():
     config['http']['enabled'] = 'True'
