@@ -16,8 +16,21 @@ def logging_defaults():
     config['logging']['debug_file'] = '/var/log/mopidy/mopidy-debug.log'
 
 def local_defaults():
-    config['local']['media_dir'] = '/Music'
     config['local']['enabled'] = 'True'
+    config['local']['media_dir'] = '/Music'
+    config['local']['library'] = 'json'
+    config['local']['scan_timeout'] = '1000'
+    config['local']['scan_flush_threshold'] = '100'
+    config['local']['scan_follow_symlinks'] = 'false'
+    config['local']['excluded_file_extensions'] = '\n  .directory\n  .html\n  .jpeg\n  .jpg\n  .log\n  .nfo\n  .png\n  .txt'
+
+def file_defaults():
+    config['file']['enabled'] = 'True'
+    config['file']['media_dirs'] = '/Music'
+    config['file']['excluded_file_extensions'] = '\n  .jpg\n  .jpeg'
+    config['file']['show_dotfiles'] = 'false'
+    config['file']['follow_symlinks'] = 'false'
+    config['file']['metadata_timeout'] = '1000'
 
 def m3u_defaults():
     config['m3u']['playlists_dir'] = '/var/lib/mopidy/playlists'
@@ -100,6 +113,7 @@ if not config.has_section('audio'):
 core_defaults()
 logging_defaults()
 local_defaults()
+file_defaults()
 m3u_defaults()
 http_defaults()
 mpd_defaults()
