@@ -1,8 +1,8 @@
+#Systemsettings are commented out, because they are now in the CoMakingPiSettings Repo.
+#sudo ./Install_SystemSettings.sh
 
-sudo ./Install_SystemSettings.sh
-
-#Right now, this runs on a raspberry pi 2 without a Bluetooth dongle. Therefore, no BT_Speaker is needed.
-#sudo ./Install_BT_Speaker.sh
+#BT_speaker enabled again, since we will get a Pi3 soon.
+sudo ./Install_BT_Speaker.sh
 
 sudo ./Install_Mopidy.sh
 
