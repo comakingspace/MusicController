@@ -16,9 +16,9 @@ def bt_speaker_defaults():
 
 def alsa_defaults():
     config['alsa']['enabled'] = 'yes'
-    config['alsa']['mixer'] = 'Digital'
+    config['alsa']['mixer'] = 'PCM'
     config['alsa']['id'] = '0'
-    config['alsa']['cardindex'] = '1'
+    config['alsa']['cardindex'] = '0'
 
 
 if not config.has_section('bt_speaker'):
