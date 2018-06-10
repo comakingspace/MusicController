@@ -89,6 +89,9 @@ if not config.has_section('logging'):
 if not config.has_section('local'):
     config.add_section('local')
 
+if not config.has_section('file'):
+    config.add_section('file')
+
 if not config.has_section('m3u'):
     config.add_section('m3u')
 
