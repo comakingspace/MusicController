@@ -32,7 +32,7 @@ except:
 if not config_main.has_section('General'):
     config_main.add_section('General')
 
-config_audio['General']['Name'] = 'PiMusicBoxBT'
+config_audio['General']['Name'] = 'CoMakingMusic'
 config_audio['General']['Class'] = '0x20041C'
 with open(config_file_audio, 'wb') as configfile:
   config_audio.write(configfile)
@@ -47,6 +47,6 @@ except:
 if not config_BTCentral.has_section('General'):
     config_BTCentral.add_section('General')
 
-config_audio['General']['Name'] = 'PiMusicBoxBT'
+config_audio['General']['Name'] = 'CoMakingMusic'
 with open(config_file_BTCentral, 'wb') as configfile:
   config_BTCentral.write(configfile)
