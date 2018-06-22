@@ -22,12 +22,12 @@ def local_defaults():
     config['local']['scan_timeout'] = '1000'
     config['local']['scan_flush_threshold'] = '100'
     config['local']['scan_follow_symlinks'] = 'true'
-    config['local']['excluded_file_extensions'] = '\n  .directory\n  .html\n  .jpeg\n  .jpg\n  .log\n  .nfo\n  .png\n  .txt'
+    config['local']['excluded_file_extensions'] = '\n  .directory\n  .html\n  .jpeg\n  .jpg\n  .log\n  .nfo\n  .png\n  .txt\n  .db\n  .ini'
 
 def file_defaults():
     config['file']['enabled'] = 'True'
     config['file']['media_dirs'] = '/Music \n  /usbdrives'
-    config['file']['excluded_file_extensions'] = '\n  .jpg\n  .jpeg'
+    config['file']['excluded_file_extensions'] = '\n  .directory\n  .html\n  .jpeg\n  .jpg\n  .log\n  .nfo\n  .png\n  .txt\n  .db\n  .ini'
     config['file']['show_dotfiles'] = 'false'
     config['file']['follow_symlinks'] = 'false'
     config['file']['metadata_timeout'] = '1000'
